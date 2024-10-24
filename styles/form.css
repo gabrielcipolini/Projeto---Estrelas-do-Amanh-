@@ -68,10 +68,47 @@ form {
 
       input:focus,
       select:focus,
-      textarea:focus {
+      textarea:focus,
+      input[type="date"]:focus-within {
         border: 0.2rem solid var(--stroke-highlight);
         outline: 0.4rem solid var(--surface-secondary);
         outline-offset: 0.1px;
+      }
+
+      #dropzone {
+        border: 2px dashed var(--stroke-default);
+        border-radius: 0.8rem;
+        gap: 0.8rem;
+        justify-items: center;
+        padding: 2.8rem;
+        position: relative;
+
+        input {
+          cursor: pointer;
+          position: absolute;
+          height: 100%;
+          opacity: 0;
+        }
+
+        p {
+          color: #a8a29e;
+          max-width: 18rem;
+          text-align: center;
+        }
+
+        &:hover,
+        &:has(input:focus) {
+          background-color: var(--surface-secondary);
+          border: 2px dashed var(--stroke-highlight);
+
+          svg path {
+            stroke: var(--stroke-highlight);
+          }
+
+          p {
+            color: var(--text-tertiary);
+          }
+        }
       }
     }
 
