@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+
+  /* typography */
+  --font-family: "Poppins", sans-serif;
+  --h1: 700 3.2rem/120% var(--poppins);
+  --h2: 700 2.4rem/120% var(--poppins);
+  --h3: 700 2rem/120% var(--poppins);
+  --h4: 700 1.6rem/120% var(--poppins);
+  --text: 400 1.6rem/120% var(--poppins);
+  --text-sm: 400 1.4rem/120% var(--poppins);
+
+  /* text */
+  --text-primary: #292524;
+  --text-secondary: #57534e;
+  --text-tertiary: #8f8881;
+  --text-highlight: #e43a12;
+
+  /* brand */
+  --brand-light: #f67841;
+  --brand-mid: #f3541c;
+  --brand-dark: #e43a12;
+
+  /* surface */
+  --surface-primary: #fff;
+  --surface-secondary: #fee7d6;
+  --surface-disabled: #e7e5e4;
+
+  /* stroke */
+  --stroke-default: #d6d3d1;
+  --stroke-highlight: #f3541c;
+
+  /* semantic */
+  --semantic-error: #dc2626;
+
+  /* supporting */
+  --orange: #f9a474;
+  --yellow: #fedf6f;
+  --green: #c7d78d;
+  --blue: #b8cedc;
+  --violet: #c3b2e7;
+  --pink: #f682a5;
+}
+
+body {
+  background-color: var(--surface-primary);
+}
