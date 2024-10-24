@@ -1,0 +1,33 @@
+#app {
+  display: grid;
+  grid-template-columns: 51.25% 1fr;
+  margin-inline: auto;
+  max-width: 128rem;
+  overflow: hidden;
+
+  .main-container {
+    overflow: auto;
+    height: 100vh;
+
+    h1{
+      font: var(--h1);
+    }
+  }
+
+  .aside-container {
+    background-color: var(--surface-secondary);
+
+    header {
+      h2 {
+        font: var(--h2);
+        margin-block: .8rem;
+      }
+    }
+
+    #ilustration {
+      margin-top: 3.2rem;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

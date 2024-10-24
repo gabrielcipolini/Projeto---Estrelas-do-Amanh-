@@ -9,12 +9,12 @@
 
   /* typography */
   --font-family: "Poppins", sans-serif;
-  --h1: 700 3.2rem/120% var(--poppins);
-  --h2: 700 2.4rem/120% var(--poppins);
-  --h3: 700 2rem/120% var(--poppins);
-  --h4: 700 1.6rem/120% var(--poppins);
-  --text: 400 1.6rem/120% var(--poppins);
-  --text-sm: 400 1.4rem/120% var(--poppins);
+  --h1: 600 2.4rem/125% var(--font-family);
+  --h2: 600 4rem/125% var(--font-family);
+  --h3: 700 2rem/120% var(--font-family);
+  --h4: 700 1.6rem/120% var(--font-family);
+  --text: 400 1.6rem/150% var(--font-family);
+  --text-sm: 400 1.4rem/120% var(--font-family);
 
   /* text */
   --text-primary: #292524;
@@ -50,4 +50,14 @@
 
 body {
   background-color: var(--surface-primary);
+  color: var(--text-primary);
+  font: var(--text);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  color: inherit;
+  font: inherit;
 }

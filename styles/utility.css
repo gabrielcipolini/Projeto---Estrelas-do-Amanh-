@@ -1,0 +1,12 @@
+.padding-64 {
+  padding: 6.4rem;
+}
+
+.txt-secondary {
+  color: var(--text-secondary);
+  font: var(--text);
+}
+
+.txt-highlight {
+  color: var(--text-highlight);
+}
