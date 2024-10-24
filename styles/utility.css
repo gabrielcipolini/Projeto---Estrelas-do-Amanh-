@@ -1,10 +1,17 @@
+.grid {
+  display: grid;
+}
+
+.gap-48 {
+  gap: 4.8rem;
+}
+
 .padding-64 {
   padding: 6.4rem;
 }
 
-.txt-secondary {
-  color: var(--text-secondary);
-  font: var(--text);
+.txt-color-primary {
+  color: var(--text-primary);
 }
 
 .txt-highlight {

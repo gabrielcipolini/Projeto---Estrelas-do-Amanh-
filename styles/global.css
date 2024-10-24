@@ -11,10 +11,9 @@
   --font-family: "Poppins", sans-serif;
   --h1: 600 2.4rem/125% var(--font-family);
   --h2: 600 4rem/125% var(--font-family);
-  --h3: 700 2rem/120% var(--font-family);
-  --h4: 700 1.6rem/120% var(--font-family);
+  --legend: 600 1.6rem/125% var(--font-family);
   --text: 400 1.6rem/150% var(--font-family);
-  --text-sm: 400 1.4rem/120% var(--font-family);
+  --text-sm: 400 1.4rem/140% var(--font-family);
 
   /* text */
   --text-primary: #292524;
@@ -50,14 +49,7 @@
 
 body {
   background-color: var(--surface-primary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font: var(--text);
   overflow: hidden;
-}
-
-h1,
-h2,
-h3 {
-  color: inherit;
-  font: inherit;
 }

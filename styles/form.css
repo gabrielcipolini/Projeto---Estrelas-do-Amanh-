@@ -1,0 +1,83 @@
+form {
+  fieldset {
+    border: none;
+    gap: 2.4rem;
+
+    legend {
+      font: var(--legend);
+    }
+
+    .inpt-wrapper {
+      gap: 0.4rem;
+
+      label,
+      span {
+        font: var(--text-sm);
+      }
+
+      span {
+        color: var(--text-tertiary);
+      }
+
+      input,
+      select,
+      textarea {
+        appearance: none;
+        border: 1px solid var(--stroke-default);
+        border-radius: 0.8rem;
+        color: var(--text-primary);
+        font: var(--text);
+        padding: 1.2rem 1.6rem;
+        width: 100%;
+      }
+
+      textarea {
+        resize: none;
+        min-height: 12rem;
+      }
+
+      input[type="date"] {
+        position: relative;
+
+        &::-webkit-calendar-picker-indicator {
+          opacity: 0;
+        }
+
+        &::before {
+          content: "";
+          background: url(../assets/icons/calendar-03.svg) center/contain
+            no-repeat;
+          position: absolute;
+          right: 1.6rem;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+      }
+
+      select {
+        background: url(../assets/icons/arrow-down-01.svg) right 1.6rem center
+          no-repeat;
+      }
+
+      select:focus {
+        background: url(../assets/icons/arrow-up-01.svg) right 1.6rem center
+          no-repeat;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border: 0.2rem solid var(--stroke-highlight);
+        outline: 0.4rem solid var(--surface-secondary);
+        outline-offset: 0.1px;
+      }
+    }
+
+    #cols2 {
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+  }
+}

@@ -14,18 +14,133 @@
     />
   </head>
   <body>
-    <div id="app">
+    <div id="app" class="grid">
       <main>
-        <div class="main-container padding-64">
-          <div id="back">
-            <img src="assets/icons/arrow-left-02.svg" alt="Ícone de voltar" />
-            <span>Voltar</span>
-          </div>
-          <h1>Formulário de matrícula</h1>
-          <p class="txt-secondary">
-            Preencha os dados abaixo para matricular seu filho na escola de
-            educação infantil Estrelas do Amanhã.
-          </p>
+        <div class="main-container grid gap-48 padding-64">
+          <header>
+            <div id="back">
+              <img src="assets/icons/arrow-left-02.svg" alt="Ícone de voltar" />
+              <span>Voltar</span>
+            </div>
+
+            <h1 class="txt-color-primary">Formulário de matrícula</h1>
+            <p>
+              Preencha os dados abaixo para matricular seu filho na escola de
+              educação infantil Estrelas do Amanhã.
+            </p>
+          </header>
+
+          <form method="post" enctype="multipart/form-data" class="grid gap-48">
+            <fieldset class="grid">
+              <div id="legend">
+                <legend class="txt-color-primary">
+                  Informações da criança
+                </legend>
+              </div>
+
+              <div class="inpt-wrapper grid">
+                <label for="fullName">Nome completo</label>
+                <input type="text" name="fullName" id="fullName" />
+              </div>
+
+              <div class="inpt-wrapper grid">
+                <label for="birthdate">Data de nascimento</label>
+                <input type="date" name="birthdate" id="birthdate" />
+              </div>
+
+              <div class="inpt-wrapper grid">
+                <label for="gender">Sexo</label>
+                <select name="gender" id="gender">
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="male">Masculino</option>
+                  <option value="female">Feminino</option>
+                </select>
+              </div>
+
+              <div class="inpt-wrapper grid">
+                <label for="medicalInfo">Informações médicas</label>
+                <textarea name="medicalInfo" id="medicalInfo"></textarea>
+              </div>
+
+              <div class="inpt-wrapper grid">
+                <label for="birthFile">Certidão de nascimento</label>
+                <input
+                  type="file"
+                  name="birthFile"
+                  id="birthFile"
+                />
+              </div>
+            </fieldset>
+
+            <fieldset class="grid">
+              <div id="legend">
+                <legend class="txt-color-primary">Endereço residencial</legend>
+              </div>
+
+              <div class="inpt-wrapper grid">
+                <label for="fullName">CEP</label>
+                <input type="text" name="fullName" id="fullName" />
+              </div>
+
+              <div id="cols2" class="grid">
+                <div class="inpt-wrapper grid">
+                  <label for="birthdate">Rua</label>
+                  <input type="text" name="birthdate" id="birthdate" />
+                </div>
+                <div class="inpt-wrapper grid">
+                  <label for="birthdate">Número</label>
+                  <input type="number" name="birthdate" id="birthdate" />
+                </div>
+                <div class="inpt-wrapper grid">
+                  <label for="birthdate">Cidade</label>
+                  <input type="text" name="birthdate" id="birthdate" />
+                </div>
+                <div class="inpt-wrapper grid">
+                  <label for="birthdate">Estado</label>
+                  <input type="text" name="birthdate" id="birthdate" />
+                </div>
+              </div>
+
+              <div class="inpt-wrapper grid">
+                <label for="birthdate">Complemento</label>
+                <input type="text" name="birthdate" id="birthdate" />
+              </div>
+            </fieldset>
+
+            <fieldset class="grid">
+              <div id="legend">
+                <legend class="txt-color-primary">
+                  Informações do responsável
+                </legend>
+              </div>
+
+              <div class="inpt-wrapper grid">
+                <label for="responsibleName">Nome do responsável</label>
+                <input
+                  type="text"
+                  name="responsibleName"
+                  id="responsibleName"
+                />
+                <span class="text-sm"
+                  >Principal responsável legal e contato de emergência</span
+                >
+              </div>
+
+              <div class="inpt-wrapper grid">
+                <label for="responsibleTel">Telefone</label>
+                <input type="tel" name="responsibleTel" id="responsibleTel" />
+              </div>
+
+              <div class="inpt-wrapper grid">
+                <label for="responsibleMail">E-mail</label>
+                <input
+                  type="email"
+                  name="responsibleMail"
+                  id="responsibleMail"
+                />
+              </div>
+            </fieldset>
+          </form>
         </div>
       </main>
 
@@ -37,11 +152,11 @@
               alt="Logo da Estrelas do Amanhã"
               id="logo"
             />
-            <h2>
+            <h2 class="txt-color-primary">
               Porque cada momento de
               <span class="txt-highlight">aprendizado</span> conta
             </h2>
-            <p class="txt-secondary">
+            <p>
               Inscreva seu filho em nossa escola e veja-o florescer em um
               ambiente acolhedor, seguro e estimulante.
             </p>
