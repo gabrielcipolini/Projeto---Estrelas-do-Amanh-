@@ -1,19 +1,25 @@
 form {
+  & fieldset:nth-child(3),
+  & fieldset:nth-child(2),
+  & fieldset:nth-child(1) {
+    display: none;
+  }
+
   fieldset {
     border: none;
-    gap: 2.4rem;
 
     legend {
       font: var(--legend);
+      margin-bottom: 2.4rem;
+    }
+
+    label,
+    span {
+      font: var(--text-sm);
     }
 
     .inpt-wrapper {
       gap: 0.4rem;
-
-      label,
-      span {
-        font: var(--text-sm);
-      }
 
       small {
         color: var(--text-tertiary);
@@ -131,11 +137,74 @@ form {
 
           color: var(--semantic-error);
           font: var(--semantic-error);
-          margin-top: .4rem;
+          margin-top: 0.4rem;
         }
 
         &:not(:focus):valid + .error {
           display: none;
+        }
+      }
+    }
+  }
+
+  .matriculation {
+    &  label:nth-child(4) {
+      margin-top: 2.4rem;
+    }
+
+    .radio-wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+      gap: 1.6rem;
+      margin-top: 1.6rem;
+
+      .radio-inner {
+        border: 1px solid var(--stroke-default);
+        border-radius: 0.8rem;
+        justify-items: center;
+        padding: 3.2rem 0.8rem 1.6rem;
+        position: relative;
+
+        input,
+        input:focus,
+        input:hover {
+          all: unset;
+        }
+
+        .radio-image {
+          background-image: url(../assets/icons/radio-default.svg);
+          width: 2.4rem;
+          height: 2.4rem;
+
+          position: absolute;
+          top: 0.8rem;
+          left: 0.8rem;
+        }
+
+        &:hover,
+        &:focus-within {
+          border: 2px solid var(--stroke-highlight);
+
+          & .radio-image {
+            background-image: url(../assets/icons/radio-hover.svg);
+            width: 2.4rem;
+            height: 2.4rem;
+          }
+        }
+
+        &:has(:checked) {
+          border: 2px solid var(--stroke-highlight);
+
+          & .radio-image {
+            background-image: url(../assets/icons/radio-checked.svg);
+            width: 2.4rem;
+            height: 2.4rem;
+          }
+        }
+
+        input[type="radio"] {
+          position: absolute;
+          width: 100%;
+          height: 100%;
         }
       }
     }
