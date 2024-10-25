@@ -40,7 +40,12 @@
 
               <div class="inpt-wrapper grid">
                 <label for="fullName">Nome completo</label>
-                <input type="text" name="fullName" id="fullName" />
+                <input
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  placeholder="Nome completo"
+                />
               </div>
 
               <div class="inpt-wrapper grid">
@@ -59,7 +64,11 @@
 
               <div class="inpt-wrapper grid">
                 <label for="medicalInfo">Informações médicas</label>
-                <textarea name="medicalInfo" id="medicalInfo"></textarea>
+                <textarea
+                  name="medicalInfo"
+                  id="medicalInfo"
+                  placeholder="Digite aqui observações médicas que devem ser consideradas pela escola"
+                ></textarea>
               </div>
 
               <div class="inpt-wrapper grid">
@@ -101,32 +110,63 @@
               </div>
 
               <div class="inpt-wrapper grid">
-                <label for="fullName">CEP</label>
-                <input type="text" name="fullName" id="fullName" />
+                <label for="cep">CEP</label>
+                <input type="text" name="cep" id="cep" value="01234-567" />
               </div>
 
               <div id="cols2" class="grid">
                 <div class="inpt-wrapper grid">
-                  <label for="birthdate">Rua</label>
-                  <input type="text" name="birthdate" id="birthdate" />
+                  <label for="street">Rua</label>
+                  <input
+                    type="text"
+                    name="street"
+                    id="street"
+                    value="Rua das Flores"
+                    disabled
+                  />
                 </div>
+
                 <div class="inpt-wrapper grid">
-                  <label for="birthdate">Número</label>
-                  <input type="number" name="birthdate" id="birthdate" />
+                  <label for="houseNum">Número</label>
+                  <input
+                    type="number"
+                    name="houseNum"
+                    id="houseNum"
+                    value="123"
+                  />
                 </div>
+
                 <div class="inpt-wrapper grid">
-                  <label for="birthdate">Cidade</label>
-                  <input type="text" name="birthdate" id="birthdate" />
+                  <label for="city">Cidade</label>
+                  <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    value="São Paulo"
+                    disabled
+                  />
                 </div>
+
                 <div class="inpt-wrapper grid">
-                  <label for="birthdate">Estado</label>
-                  <input type="text" name="birthdate" id="birthdate" />
+                  <label for="state">Estado</label>
+                  <input
+                    type="text"
+                    name="state"
+                    id="state"
+                    value="SP"
+                    disabled
+                  />
                 </div>
               </div>
 
               <div class="inpt-wrapper grid">
-                <label for="birthdate">Complemento</label>
-                <input type="text" name="birthdate" id="birthdate" />
+                <label for="address2">Complemento</label>
+                <input
+                  type="text"
+                  name="address2"
+                  id="address2"
+                  placeholder="Bloco/Apartamento ou Referência"
+                />
               </div>
             </fieldset>
 
@@ -143,15 +183,21 @@
                   type="text"
                   name="responsibleName"
                   id="responsibleName"
+                  placeholder="Nome completo"
                 />
-                <span class="text-sm"
-                  >Principal responsável legal e contato de emergência</span
+                <small class="text-sm"
+                  >Principal responsável legal e contato de emergência</small
                 >
               </div>
 
               <div class="inpt-wrapper grid">
                 <label for="responsibleTel">Telefone</label>
-                <input type="tel" name="responsibleTel" id="responsibleTel" />
+                <input
+                  type="tel"
+                  name="responsibleTel"
+                  id="responsibleTel"
+                  placeholder="(99) 9 9999-9999"
+                />
               </div>
 
               <div class="inpt-wrapper grid">
@@ -160,7 +206,16 @@
                   type="email"
                   name="responsibleMail"
                   id="responsibleMail"
+                  placeholder="abc@email.com"
+                  required
                 />
+                <div class="error">
+                  <img
+                    src="assets/icons/alert.svg"
+                    alt="Ícone de alerta vermelho"
+                  />
+                  <span class="text-sm">Insira um e-mail válido</span>
+                </div>
               </div>
             </fieldset>
           </form>

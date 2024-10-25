@@ -15,7 +15,7 @@ form {
         font: var(--text-sm);
       }
 
-      span {
+      small {
         color: var(--text-tertiary);
       }
 
@@ -36,26 +36,34 @@ form {
         min-height: 12rem;
       }
 
-      input[type="date"] {
-        position: relative;
+      input {
+        &[type="date"] {
+          position: relative;
 
-        &::-webkit-calendar-picker-indicator {
-          opacity: 0;
+          &::-webkit-calendar-picker-indicator {
+            opacity: 0;
+          }
+
+          &::before {
+            content: "";
+            background: url(../assets/icons/calendar-03.svg) center/contain
+              no-repeat;
+            position: absolute;
+            right: 1.6rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2.4rem;
+            height: 2.4rem;
+          }
         }
 
-        &::before {
-          content: "";
-          background: url(../assets/icons/calendar-03.svg) center/contain
-            no-repeat;
-          position: absolute;
-          right: 1.6rem;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 2.4rem;
-          height: 2.4rem;
+        & {
+          &[disabled] {
+            background-color: var(--surface-disabled);
+            opacity: 0.5;
+          }
         }
       }
-
       select {
         background: url(../assets/icons/arrow-down-01.svg) right 1.6rem center
           no-repeat;
@@ -110,11 +118,31 @@ form {
           }
         }
       }
-    }
 
-    #cols2 {
-      grid-template-columns: 2fr 1fr;
-      gap: 2rem;
+      input {
+        &:invalid {
+          border: 1px solid red;
+        }
+
+        &[required] + .error {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+
+          color: var(--semantic-error);
+          font: var(--semantic-error);
+          margin-top: .4rem;
+        }
+
+        &:not(:focus):valid + .error {
+          display: none;
+        }
+      }
     }
+  }
+
+  #cols2 {
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
   }
 }
