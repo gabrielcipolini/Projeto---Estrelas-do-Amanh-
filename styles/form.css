@@ -1,9 +1,5 @@
 form {
-  /* & fieldset:nth-child(3),
-  & fieldset:nth-child(2),
-  & fieldset:nth-child(1) {
-    display: none;
-  } */
+  gap: 4.8rem;
 
   fieldset {
     border: none;
@@ -20,27 +16,6 @@ form {
 
     .inpt-wrapper {
       gap: 0.4rem;
-
-      small {
-        color: var(--text-tertiary);
-      }
-
-      input,
-      select,
-      textarea {
-        appearance: none;
-        border: 1px solid var(--stroke-default);
-        border-radius: 0.8rem;
-        color: var(--text-primary);
-        font: var(--text);
-        padding: 1.2rem 1.6rem;
-        width: 100%;
-      }
-
-      textarea {
-        resize: none;
-        min-height: 12rem;
-      }
 
       input {
         &[type="date"] {
@@ -61,6 +36,24 @@ form {
             width: 2.4rem;
             height: 2.4rem;
           }
+
+          &:invalid {
+            border: 1px solid red;
+          }
+
+          &[required] + .error {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+
+            color: var(--semantic-error);
+            font: var(--semantic-error);
+            margin-top: 0.4rem;
+          }
+
+          &:not(:focus):valid + .error {
+            display: none;
+          }
         }
 
         & {
@@ -70,6 +63,7 @@ form {
           }
         }
       }
+
       select {
         background: url(../assets/icons/arrow-down-01.svg) right 1.6rem center
           no-repeat;
@@ -80,6 +74,18 @@ form {
           no-repeat;
       }
 
+      input,
+      select,
+      textarea {
+        appearance: none;
+        border: 1px solid var(--stroke-default);
+        border-radius: 0.8rem;
+        color: var(--text-primary);
+        font: var(--text);
+        padding: 1.2rem 1.6rem;
+        width: 100%;
+      }
+
       input:focus,
       select:focus,
       textarea:focus,
@@ -88,71 +94,66 @@ form {
         outline: 0.4rem solid var(--surface-secondary);
         outline-offset: 0.1px;
       }
+    }
+  }
 
-      #dropzone {
-        border: 2px dashed var(--stroke-default);
-        border-radius: 0.8rem;
-        gap: 0.8rem;
-        justify-items: center;
-        padding: 2.8rem;
-        position: relative;
+  .child-info {
+    textarea {
+      resize: none;
+      min-height: 12rem;
+    }
 
-        input {
-          cursor: pointer;
-          position: absolute;
-          height: 100%;
-          opacity: 0;
+    .dropzone {
+      border: 2px dashed var(--stroke-default);
+      border-radius: 0.8rem;
+      gap: 0.8rem;
+      justify-items: center;
+      padding: 2.8rem;
+      position: relative;
+
+      input {
+        cursor: pointer;
+        position: absolute;
+        height: 100%;
+        opacity: 0;
+      }
+
+      p {
+        color: #a8a29e;
+        max-width: 18rem;
+        text-align: center;
+      }
+
+      &:hover,
+      &:has(input:focus) {
+        background-color: var(--surface-secondary);
+        border: 2px dashed var(--stroke-highlight);
+
+        svg path {
+          stroke: var(--stroke-highlight);
         }
 
         p {
-          color: #a8a29e;
-          max-width: 18rem;
-          text-align: center;
-        }
-
-        &:hover,
-        &:has(input:focus) {
-          background-color: var(--surface-secondary);
-          border: 2px dashed var(--stroke-highlight);
-
-          svg path {
-            stroke: var(--stroke-highlight);
-          }
-
-          p {
-            color: var(--text-tertiary);
-          }
-        }
-      }
-
-      input {
-        &:invalid {
-          border: 1px solid red;
-        }
-
-        &[required] + .error {
-          display: flex;
-          align-items: center;
-          gap: 0.4rem;
-
-          color: var(--semantic-error);
-          font: var(--semantic-error);
-          margin-top: 0.4rem;
-        }
-
-        &:not(:focus):valid + .error {
-          display: none;
+          color: var(--text-tertiary);
         }
       }
     }
   }
 
-  #cols2 {
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
+  .residencial-address {
+    #cols-2 {
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
   }
 
-  .matriculation {
+  .guardian-info {
+    small {
+      color: var(--text-tertiary);
+    }
+  }
+
+  .enrollment-options {
     & > label:nth-child(2),
     & > label:nth-child(4) {
       display: inline-block;
@@ -222,12 +223,7 @@ form {
     align-items: flex-start;
     gap: 1.2rem;
 
-    & label {
-      font: var(--text);
-    }
-
     & strong {
-      font: var(--text);
       color: var(--text-highlight);
       font-weight: 500;
     }
@@ -257,6 +253,40 @@ form {
 
     &:has(:checked) .checkbox-image {
       background-image: url(../assets/icons/checkbox-checked.svg);
+    }
+  }
+
+  .actions-wrapper {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: right;
+
+    button {
+      all: unset;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      font-weight: 500;
+      padding: 1.2rem 2.4rem;
+    }
+
+    & .btn-primary {
+      background-color: var(--brand-dark);
+      color: #fff;
+
+      &:hover,
+      &:focus-within {
+        background-color: var(--brand-mid);
+      }
+    }
+
+    & .btn-secondary {
+      border: 1px solid var(--text-highlight);
+      color: var(--text-highlight);
+
+      &:hover,
+      &:focus-within {
+        outline: 0.4rem solid var(--surface-secondary);
+      }
     }
   }
 }

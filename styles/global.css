@@ -36,7 +36,7 @@
   --stroke-highlight: #f3541c;
 
   /* semantic */
-  --semantic-error: #dc2626;
+  --semantic-error: #140b0b;
 
   /* supporting */
   --orange: #f9a474;
@@ -52,4 +52,13 @@ body {
   color: var(--text-secondary);
   font: var(--text);
   overflow: hidden;
+}
+
+/* utility */
+.grid {
+  display: grid;
+}
+
+.txt-color-primary {
+  color: var(--text-primary);
 }

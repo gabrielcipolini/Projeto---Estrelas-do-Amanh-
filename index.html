@@ -16,7 +16,7 @@
   <body>
     <div id="app" class="grid">
       <main>
-        <div class="main-container grid gap-48 padding-64">
+        <div class="main-container grid">
           <header>
             <div id="back">
               <img src="assets/icons/arrow-left-02.svg" alt="Ícone de voltar" />
@@ -30,8 +30,8 @@
             </p>
           </header>
 
-          <form method="post" enctype="multipart/form-data" class="grid gap-48">
-            <fieldset class="info grid">
+          <form method="post" enctype="multipart/form-data" class="grid">
+            <fieldset class="child-info grid">
               <div id="legend">
                 <legend class="txt-color-primary">
                   Informações da criança
@@ -74,7 +74,7 @@
               <div class="inpt-wrapper grid">
                 <label for="birthFile">Certidão de nascimento</label>
 
-                <div id="dropzone" class="grid">
+                <div class="grid dropzone">
                   <input type="file" name="birthFile" id="birthFile" />
                   <svg
                     width="48"
@@ -104,7 +104,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="info grid">
+            <fieldset class="residencial-address grid">
               <div id="legend">
                 <legend class="txt-color-primary">Endereço residencial</legend>
               </div>
@@ -114,7 +114,7 @@
                 <input type="text" name="cep" id="cep" value="01234-567" />
               </div>
 
-              <div id="cols2" class="grid">
+              <div id="cols-2" class="grid">
                 <div class="inpt-wrapper grid">
                   <label for="street">Rua</label>
                   <input
@@ -170,7 +170,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="info grid">
+            <fieldset class="guardian-info grid">
               <div id="legend">
                 <legend class="txt-color-primary">
                   Informações do responsável
@@ -219,7 +219,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="matriculation">
+            <fieldset class="enrollment-options">
               <legend class="txt-color-primary">Opções de matrícula</legend>
               <label>Selecione o turno de estudo</label>
               <div class="radio-wrapper grid">
@@ -347,21 +347,31 @@
               </div>
             </fieldset>
 
-            <div class="terms-wrapper input-wrapper checkbox-wrapper">
+            <div class="terms-wrapper checkbox-wrapper">
               <div class="checkbox-image"></div>
-              <input type="checkbox" name="terms" id="terms" required/>
+              <input type="checkbox" name="terms" id="terms" required />
 
               <label for="terms">
-                Declaro que li e concordo com os <strong>Termos e Condições</strong> e com a
-                <strong>Política de Privacidade</strong> da escola Estrela do Amanhã.
+                Declaro que li e concordo com os
+                <strong>Termos e Condições</strong> e com a
+                <strong>Política de Privacidade</strong> da escola Estrela do
+                Amanhã.
               </label>
+            </div>
+
+            <div class="actions-wrapper">
+              <button class="btn-secondary" type="button">
+                Salvar respostas
+              </button>
+
+              <button class="btn-primary" type="submit">Fazer matrícula</button>
             </div>
           </form>
         </div>
       </main>
 
       <aside>
-        <div class="aside-container padding-64">
+        <div class="aside-container">
           <header>
             <img
               src="assets/logo.svg"
@@ -370,7 +380,7 @@
             />
             <h2 class="txt-color-primary">
               Porque cada momento de
-              <span class="txt-highlight">aprendizado</span> conta
+              <span>aprendizado</span> conta
             </h2>
             <p>
               Inscreva seu filho em nossa escola e veja-o florescer em um

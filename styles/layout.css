@@ -5,7 +5,9 @@
   overflow: hidden;
 
   .main-container {
+    gap: 4.8rem;
     overflow: auto;
+    padding: 6.4rem;
     height: 100vh;
 
     & header {
@@ -21,16 +23,21 @@
         margin-block: 2.4rem 0.8rem;
       }
     }
-
   }
 
   .aside-container {
     background-color: var(--surface-secondary);
+    padding: 6.4rem;
+
     header {
       h2 {
         font: var(--h2);
         margin-block: 0.8rem;
       }
+    }
+
+    span {
+      color: var(--text-highlight);
     }
 
     #ilustration {
