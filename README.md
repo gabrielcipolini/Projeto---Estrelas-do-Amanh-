@@ -1,4 +1,4 @@
-# Portal de Notícias - Rocketseat
+# Estrelas do Amanhã - Rocketseat
 ![Thumbnail](https://github.com/user-attachments/assets/3f6959dc-7d58-49a4-b4d3-bf0057392a7b)
 
 
